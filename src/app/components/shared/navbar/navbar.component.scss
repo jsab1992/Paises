@@ -1,0 +1,27 @@
+@import "../../../../assets/_variables.scss";
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $blue-dark;
+  padding: 34px;
+}
+
+.box-title-toolbar {
+  display: grid;
+  justify-items: center;
+  color: $white;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.change_scheme {
+  display: grid;
+  justify-content: flex-end;
+  width: 100%;
+  color: $white;
+  font-size: 15px;
+  font-weight: 300;
+}

@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import  './assets/_variables.scss';
+@import url('https://fonts.google.com/specimen/Nunito+Sans');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $blue-secondary;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.container{
+display: grid;
+gap: 1rem;
+grid-auto-rows: 22rem;
+grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}

@@ -1,0 +1,27 @@
+<div>
+  <input type="text" name="filterCountry" id="" [(ngModel)]="filterCountry" />
+  <select class="">
+    <option value="africa">Africa</option>
+    <option value="americas">Americas</option>
+    <option value="asia">Asia</option>
+    <option value="europe">Europe</option>
+    <option value="oceania">Oceania</option>
+  </select>
+</div>
+
+<div class="wrapper">
+  <div
+    *ngFor="let country of countries | filterpipe: filterCountry"
+    class="card-countries"
+  >
+    <div class="img-card">
+      <img class="img-box" [src]="country.flag" />
+    </div>
+    <div class="paragraph">
+      <h4>{{ country.name }}</h4>
+      <span>Population: {{ country.population }}</span>
+      <span>Region: {{ country.region }}</span>
+      <span>Capital: {{ country.capital }}</span>
+    </div>
+  </div>
+</div>
