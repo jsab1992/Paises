@@ -3,25 +3,26 @@ import { HttpParams, HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Country } from '../../models/interface.response';
+import { hostViewClassName } from '@angular/compiler';
 
 @Injectable()
 export class CountriesServiceService {
-  baseURL = 'https://restcountries.eu/rest/v2/all';
-  searchURL = 'https://restcountries.eu/rest/v2/name/af?fullText=false';
-  regionURL = 'https://restcountries.eu/rest/v2/region/colombia';
+  allCountries = 'https://restcountries.eu/rest/v2/all';
+  searcCountries = 'https://restcountries.eu/rest/v2/name/';
+  listRegions = 'https://restcountries.eu/rest/v2/region/';
+  
+
   constructor(private http: HttpClient) {}
 
-  getCountries(){
-    return this.http.get<Country>(`${this.baseURL}`);
+  getCountries() {
+    return this.http.get<Country>(`${this.allCountries}`);
   }
 
-  getSerchCountry(){
-    return
+  getSelectRegion(region: string ) {
+   return this.http.get<Country>(`${this.listRegions}${region}`);
   }
 
-  getRegion(){
-    return this.http.get<Country>(`${this.regionURL}`)
+  getSearchCount(country: string){
+   return this.http.get<Country>(`${this.searcCountries}${country}?fullText=false`);
   }
-
-
 }

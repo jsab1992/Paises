@@ -1,20 +1,20 @@
 <!-- <app-navbar></app-navbar> -->
 <div>
 <!-- <input type="text" name="" id=""> -->
-    <input
+    <!-- <input
       type="text"
-      name="filterCountry"
-      id=""
-      [(ngModel)]="filterCountry"     
-    />
+      class="form-control"
+      placeholder="=Buscar Countries"
+      #txtSearch
+      (keyup)="onSearchCountries( txtSearch.value )"   
+    /> -->
     <select class="">
       <option value="africa">Africa</option>
       <option value="americas">Americas</option>
       <option value="asia">Asia</option>
       <option value="europe">Europe</option>
       <option value="oceania">Oceania</option>
-    </select>
-  
+    </select>  
 </div>
 
 <!-- <app-card></app-card> -->

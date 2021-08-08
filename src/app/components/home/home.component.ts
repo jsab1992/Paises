@@ -11,6 +11,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  public search: string = '';
   regions: any = [];
   filterCountry = '';
   formsearchCountry!: FormGroup;
@@ -19,11 +20,16 @@ export class HomeComponent implements OnInit {
   constructor( private _countriesService: CountriesServiceService) { }
    
   ngOnInit(): void {
-    this._countriesService.getRegion().subscribe((resp) => {
-      this.regions = resp;
-      console.table("regions " + this.regions);
-      return this.regions;
-    });
+    // this._countriesService.getRegion().subscribe((resp) => {
+    //   this.regions = resp;
+    //   console.table("regions " + this.regions);
+    //   return this.regions;
+    // });
+  }
+
+  onSearchCountries( search: string ){
+    this.search = search;
+    console.log( search );
   }
 
 }

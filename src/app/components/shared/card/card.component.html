@@ -1,7 +1,20 @@
 <div>
-  <input type="text" name="filterCountry" id="" [(ngModel)]="filterCountry" />
-  <select class="">
-    <option value="africa">Africa</option>
+  <!-- <input
+  type="text"
+  name="filterCountry"
+  [(ngModel)]="filterCountry"
+  id=""
+  #txtSearch
+  (keyup)="onSearchCountries(txtSearch.value)"
+/> -->
+  <input
+    type="text"    
+    id=""
+    #txtSearch
+    (keyup)="listSearchCountries(txtSearch.value)"
+  />
+  <select #dataOption (change)="listRegions(dataOption.value)" class="">
+    <option value="Africa">Africa</option>
     <option value="americas">Americas</option>
     <option value="asia">Asia</option>
     <option value="europe">Europe</option>
@@ -9,9 +22,15 @@
   </select>
 </div>
 
+<!-- <div
+    *ngFor="let country of countries | filterpipe: filterCountry"
+    class="card-countries" >
+  -->
+
+
 <div class="wrapper">
   <div
-    *ngFor="let country of countries | filterpipe: filterCountry"
+    *ngFor="let country of countries"
     class="card-countries"
   >
     <div class="img-card">
