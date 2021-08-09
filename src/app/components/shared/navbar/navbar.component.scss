@@ -2,19 +2,19 @@
 
 .toolbar {
   display: grid;
-  grid-template-columns: 1fr 5fr;
-  align-items: center;
-  justify-content: space-between;
-  background-color: $blue-dark;
-  padding: 34px;
+  background-color: #2b3945;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(1.5rem, 1fr));
 }
 
 .box-title-toolbar {
   display: grid;
-  justify-items: center;
-  color: $white;
-  font-size: 18px;
+  color: #fff;
   font-weight: 300;
+  grid-column-end: auto;
+  grid-auto-columns: max-content;
+  justify-self: left;
+  font-size: 20px;
 }
 
 .change_scheme {

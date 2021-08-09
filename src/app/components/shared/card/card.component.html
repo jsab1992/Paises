@@ -1,19 +1,13 @@
-<div>
-  <!-- <input
-  type="text"
-  name="filterCountry"
-  [(ngModel)]="filterCountry"
-  id=""
-  #txtSearch
-  (keyup)="onSearchCountries(txtSearch.value)"
-/> -->
+<div class="boxfilter">  
   <input
-    type="text"    
+  placeholder="Search for country"
+  class=""
+    type="search"    
     id=""
     #txtSearch
     (keyup)="listSearchCountries(txtSearch.value)"
   />
-  <select #dataOption (change)="listRegions(dataOption.value)" class="">
+  <select #dataOption (change)="listRegions(dataOption.value)" class="select-box">
     <option value="Africa">Africa</option>
     <option value="americas">Americas</option>
     <option value="asia">Asia</option>

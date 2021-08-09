@@ -13,6 +13,7 @@ import { CardComponent } from './components/shared/card/card.component';
 // Servicios
 import { CountriesServiceService } from './components/service/countries-service.service';
 import { FilterpipePipe } from './components/pipes/filterpipe.pipe';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FilterpipePipe } from './components/pipes/filterpipe.pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule 
+    FormsModule,
+    FontAwesomeModule 
   ],
   providers: [
     CountriesServiceService

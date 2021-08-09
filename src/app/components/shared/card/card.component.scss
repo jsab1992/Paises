@@ -1,5 +1,16 @@
 @import "../../../../assets/variables";
 
+$small: 576px;
+$medium: 768px;
+.boxfilter {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-template-rows: 80px 80px;
+  gap: 13px;
+  place-self: center;
+  padding: 41px;
+}
+
 .card-countries {
   display: grid;
   border-radius: 8px;
@@ -25,18 +36,120 @@
   border-top-right-radius: 8px;
   background-size: auto;
   height: 161px;
+  object-fit: cover;
 }
 
 .paragraph {
-    font-family: 'Nunito Sans', sans-serif;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    text-indent: 35px;
-    // padding-left: 29px;
-    padding-bottom: 30px;
+  font-family: "Nunito Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  color: $white;
+  text-indent: 35px;
+  // padding-left: 29px;
+  padding-bottom: 30px;
 }
 
-.paragraph, span{
-    line-height: 2;
+.paragraph,
+span {
+  line-height: 2;
+}
+
+input {
+  outline: none;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+input[type="search"] {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  background: $blue-dark
+    url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat
+    9px center;
+  border: solid 1px $blue-dark;
+  padding: 18px 140px 20px 41px;
+  width: 189px;
+  border-radius: 0.4em;
+  transition: all 0.5s;
+  color: $white;
+  margin: 8px;
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  @media screen and (max-width: $medium) {
+    max-width: 154%;
+    justify-self: center;
+    width: 86%;
+    padding: 18px 10px 20px 28px;
+  }
+  @media screen and (max-width: $small) {
+    max-width: 154%;
+    justify-self: center;
+    width: 86%;
+    padding: 18px 10px 20px 28px;
+  }
+}
+input[type="search"]:focus {
+  width: 266px;
+  background-color: $white;
+  border-color: $white-secondary;
+  color: $cyan-dark;
+
+  -webkit-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+  box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+}
+
+input:-moz-placeholder {
+  color: #999;
+}
+input::-webkit-input-placeholder {
+  color: #999;
+}
+
+select.select-box:focus-visible {
+  outline: 0px;
+}
+
+.select-box {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  justify-self: flex-end;
+  color: $white;
+  padding-left: 18px;
+  border-radius: 0.4em;
+  border: solid 1px $blue-dark;
+  background: $blue-dark;
+  width: 40%;
+  height: 61px;
+  @media screen and (max-width: $small) {
+    justify-self: center;
+    width: 99%;
+  }
+
+  &__option {
+    display: block;
+    padding: 15px;
+    background-color: #fff;
+
+    &:hover,
+    &:focus {
+      color: #546c84;
+      background-color: #fbfbfb;
+    }
+  }
+}
+option {
+  font-size: 15px;
 }
