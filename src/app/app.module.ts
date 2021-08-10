@@ -8,7 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { CardComponent } from './components/shared/card/card.component';
+import { CardComponent } from './components/Product/card/card.component';
+import { CardDetailComponent } from './components/Product/card-detail/card-detail.component';
 
 // Servicios
 import { CountriesServiceService } from './components/service/countries-service.service';
@@ -21,6 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HomeComponent,
     NavbarComponent,
     CardComponent,
+    CardDetailComponent,
     FilterpipePipe
   ],
   imports: [

@@ -1,0 +1,36 @@
+<div>
+    <button [routerLink]="['/home' ]"
+     class="button raised">Back</button>
+</div>
+<div class="box-card-detail">
+  <div class="view-flag">
+    <img
+      class="flag-detail"
+      [src]="countries.flag"
+      alt=""
+      srcset=""
+    />
+  </div>
+  <div  class="information-country">
+    <div>
+      <h1>{{countries.name}}</h1>
+    </div>
+    <div class="section-information">
+      <div>
+        <div class="title-item">Native Name: <span>{{countries.nativeName}}</span></div>
+        <div class="title-item">population: <span>{{countries.population}}</span></div>
+        <div class="title-item">Region: <span>{{countries.region}}</span></div>
+        <div class="title-item">Sub region: <span>{{countries.subregion}}</span></div>
+        <div class="title-item">Capital: <span>{{countries.capital}}</span></div>
+      </div>
+      <div> 
+        <div class="title-item">Top Level Domain: <span>{{countries.topLevelDomain}}</span></div>
+        <div class="title-item">Currencies: <span>{{countries.currencies[0].name}}</span></div>
+        <div class="title-item">Languages: <span *ngFor="let item of countries.languages">{{item.name}}</span></div>
+      </div>
+      <div class="tag-languaje">
+        <div class="tag-countries">Border Countries: <button *ngFor="let regional of countries.regionalBlocs" class="button raised">{{regional.name}}</button></div>
+      </div>
+    </div>
+  </div>
+</div>
