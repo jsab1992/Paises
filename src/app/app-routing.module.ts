@@ -6,15 +6,14 @@ import { CardComponent } from './components/Product/card/card.component';
 import { ActivatedRoute } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'home',  pathMatch: 'full', component: HomeComponent},
-  // { path: 'card', redirectTo: 'CardComponent', pathMatch: 'full'},
-  // { path: 'cardDetail', component: CardDetailComponent},
-  { path: 'card/:listCountry', component: CardComponent},
-  { path: 'cardDetail/:listCountry', component: CardDetailComponent},
+  { path: 'home', pathMatch: 'full', component: HomeComponent },
+  { path: 'card/:listCountry', component: CardComponent },
+  { path: 'cardDetail/:listCountry', component: CardDetailComponent },
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

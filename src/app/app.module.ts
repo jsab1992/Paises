@@ -13,7 +13,7 @@ import { CardDetailComponent } from './components/Product/card-detail/card-detai
 
 // Servicios
 import { CountriesServiceService } from './components/service/countries-service.service';
-import { FilterpipePipe } from './components/pipes/filterpipe.pipe';
+
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -23,7 +23,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NavbarComponent,
     CardComponent,
     CardDetailComponent,
-    FilterpipePipe
   ],
   imports: [
     BrowserModule,

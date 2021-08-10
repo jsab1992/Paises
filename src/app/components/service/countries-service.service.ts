@@ -10,7 +10,6 @@ export class CountriesServiceService {
   allCountries = 'https://restcountries.eu/rest/v2/all';
   searcCountries = 'https://restcountries.eu/rest/v2/name/';
   listRegions = 'https://restcountries.eu/rest/v2/region/';
-  
 
   constructor(private http: HttpClient) {}
 
@@ -18,11 +17,13 @@ export class CountriesServiceService {
     return this.http.get<Country>(`${this.allCountries}`);
   }
 
-  getSelectRegion(region: string ) {
-   return this.http.get<Country>(`${this.listRegions}${region}`);
+  getSelectRegion(region: string) {
+    return this.http.get<Country>(`${this.listRegions}${region}`);
   }
 
-  getSearchCount(country: string){
-   return this.http.get<Country>(`${this.searcCountries}${country}?fullText=false`);
+  getSearchCount(country: string) {
+    return this.http.get<Country>(
+      `${this.searcCountries}${country}?fullText=false`
+    );
   }
 }

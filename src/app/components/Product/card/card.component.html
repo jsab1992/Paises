@@ -19,12 +19,6 @@
     <option value="oceania">Oceania</option>
   </select>
 </div>
-
-<!-- <div
-    *ngFor="let country of countries | filterpipe: filterCountry"
-    class="card-countries" >
-  -->
-
 <div class="wrapper">
   <div *ngFor="let country of countries" class="card-countries">
     <a (click)="SendData(country)">
